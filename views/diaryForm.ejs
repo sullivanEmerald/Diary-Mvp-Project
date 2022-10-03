@@ -1,0 +1,49 @@
+<%- include('./partials/loggedIn') %>
+
+<main class="container">
+    <div class="row justify-content-center">
+        <section class="col-6 mt-5">
+            <% if (locals.messages.errors) { %>
+                <% messages.errors.forEach( el => { %>
+                    <div class="alert alert-danger"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+            <% if (locals.messages.info) { %>
+                <% messages.info.forEach( el => { %>
+                    <div class="alert alert-info"><%= el.msg %></div>
+                <% }) %>    
+            <% } %>
+
+            
+            <form action="/diary/createDiary" method="POST">
+                <h3>Hello <span class="userDiary"><%= user.userName %> </span>Welcome To Your Diary Section. What Happened ?</h3>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="title" name="title">
+                    <label for="floatingInput">Diary Title</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Diary Snippet" name="snippet">
+                    <label for="floatingInput">Diary Snippet</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <textarea name="event" id="diaryBody" cols="30" rows="10" class="form-control" placeholder="Diary Body"></textarea>
+                    <label for="diaryBody">Diary Event in Full</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="What I will Do" name="action">
+                    <label for="floatingInput">What I will Do</label>
+                  </div>
+
+
+
+                <button type="submit" class="btn btn-outline-primary">Submit</button>
+              </form>
+        </section>
+    </div>
+</main>
+
+<%- include('./partials/footer') %>
+

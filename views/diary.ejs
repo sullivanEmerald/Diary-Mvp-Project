@@ -1,0 +1,49 @@
+<%- include('./partials/loggedIn') %>
+
+<div class="container singleDiary">
+    <h1><%= oneDiary.title %></h1>
+    <p class="lead diaryBody"><%= oneDiary.body %></p>
+
+    <hr>
+    
+
+    <ul class="commentDiaryLi">
+        <% for(let i = 0; i < comment.length; i++) { %>
+            <li><%= comment[i].comment %></li>
+            <a href="/profile/<%= comment[i].postId %>">
+                <img class="commentImage" src="<%= comment[i].commenterId %>" alt="Not found">
+            </a>
+            <form action="/comment/editLike/<%= comment[i]._id %>?_method=PUT" method="POST">
+                <button type="submit">likes</button>
+                <span><%= comment[i].likes %> </span>
+            </form>
+        <% } %>
+    </ul>
+    
+    <section>
+        <form action="/diary/addLike/<%= oneDiary.id %>?_method=PUT" method="POST">
+            <button type="submit" class="btn btn-primary" id="likeDiary"> <i class="fa-solid fa-thumbs-up displayDiary"></i></button>
+        </form>
+
+        <% if(oneDiary.userId == user._id) { %>
+            <span class="displayLike"> likes : You and <%= oneDiary.likes %> others</span>
+            <% } else { %>
+            <span class="displayLike"> Likes :   <%= oneDiary.likes %> </span>
+            <% } %>
+    
+        <form action="/comment/createComment/<%= oneDiary._id %>" method="POST">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Comment" name="comment" autocomplete="on">
+                <button class="btn btn-danger commentButton" type="submit"> <i class="fa-solid fa-paper-plane"></i> </button>
+              </div>
+        </form>
+    </section>
+
+    
+</div>
+
+<a href="/feed" class="btn btn-primary backButton"> TO BACK TO DIARY BLOG</a>
+
+
+
+<%- include('./partials/footer') %>

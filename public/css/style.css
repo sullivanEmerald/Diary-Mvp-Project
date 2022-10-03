@@ -1,0 +1,341 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.headers{
+    background-color: #0e76a8 ;
+}
+
+.nav-item > a{
+    color: white;
+    font-size: 20px;
+}
+
+.nav-item > a:hover,
+.brand-container > a:hover{
+    color: rgb(90, 237, 90);
+}
+
+.brand-container > a {
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.feedHeader{
+    display: flex;
+}
+
+.feedNote{
+    margin-top: 80px;
+    margin-left: 20px;
+    font-size: 30px;
+    color: #0e76a8;
+}
+
+/* diarySection */
+.diarySectionDisplay{
+    margin-top: 80px;
+}
+.diarySection {
+    padding: 5px;
+}
+
+.diarySection > img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border-color: #0e76a8;
+    border-width: 2px;
+    border-style: solid;
+    margin: 10px;
+}
+
+footer{
+    margin-top: 15%;
+    font-size: 20px;
+}
+
+.copyRight{
+    margin-top: 20px;
+}
+.fa-facebook,
+.fa-twitter,
+.fa-linkedin{
+    color: #0e76a8;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+hr{
+    width: 85%;
+    border: 1px solid #0e76a8;
+    margin: 30px auto;
+    
+}
+
+
+.logoImage{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border-color: #0e76a8;
+    border-width: 2px;
+    border-style: solid;
+    margin-left: 40%;
+    margin-bottom: 15px;
+}
+
+.logoImage2{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border-color: #0e76a8;
+    border-width: 2px;
+    border-style: solid;
+    margin-left: 5%;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+
+.redirect {
+    font-size: 20px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+
+.diarySection{
+    box-shadow: #0e76a8 0px 2px 8px 0px;
+    border-radius: 5%;
+}
+
+
+
+.diarySectionHeader{
+    margin: 10px;
+    color: #0e76a8;
+
+}
+
+.diarySectionInput{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding: 5px;
+
+}
+
+.diarySectionHeader::first-letter{
+    text-transform: capitalize;
+}
+
+
+/* home */
+
+.homeIndex {
+    margin-top:7%;
+}
+
+.homeIndex .row{
+    padding-left: 40px;
+}
+
+.row img{
+    border-radius: 20%;
+    border: 1px solid #0e76a8;
+   
+    
+}
+
+.row  > .col-md-6 {
+    width: 40%;
+}
+
+.row  > .col-md-6 + .col-md-6 {
+    width: 50%;
+    height: 500px;
+    margin-left: 10%;
+    box-sizing: border-box;
+
+}
+
+.row  > .col-md-6 + .col-md-6 p{
+    text-align: justify;
+    width: 70%;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+
+
+/* diary/:id */
+
+.singleDiary {
+    margin: 40px auto;
+    width: 70%;
+    box-shadow: #0e76a8 0px 2px 8px 0px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;   
+
+}
+
+.singleDiary section{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    
+}
+
+.singleDiary section button{
+    background: none;
+    color: black;
+    border: none;
+}
+
+.displayDiary , .displayLike{
+    font-size: 25px;
+    color: #0e76a8;
+}
+
+/* comments */
+
+
+.commentDiaryLi {
+    text-align: justify;
+    list-style: none;
+}
+
+.commentDiaryLi form{
+    display: flex;
+}
+
+.commentDiaryLi li {
+    display: inline-block;
+    background-color: rgb(234, 232, 232);
+    margin: 15px;
+    font-size: 20px;
+    border-radius: 40px;
+    width: 40%;
+    padding: 10px 20px;
+    box-shadow: #0e76a8 0px 2px 5px 0px;
+}
+
+footer{
+    text-align: center;
+}
+
+.backButton{
+    display: inline-block;
+    position: absolute;
+    right: 15%;
+}
+
+
+.diaryBody{
+    font-size: 30px;
+}
+
+
+.commentDiaryLi button, .commentDiaryLi span{
+    display: block;
+    margin-left: 25px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    color:#0e76a8;
+    font-size: 15px;
+    text-decoration: underline;
+    transform: translateY(-50%);
+}
+
+.commentDiaryLi span{
+    text-decoration: none;
+    color: black;
+    margin-left: 0;
+}
+
+.commentImage{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+
+.singleDiary > h1 {
+    text-decoration: underline;
+    color: #0e76a8;
+}
+
+
+.singleDiary > h1 + p {
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.singleDiary > h1 + p::first-letter{
+    text-transform: capitalize;
+}
+
+#loginBtn{
+    color: white;
+    background-color: #0e76a8;
+    border: none;
+    margin: 5px auto;
+    display: block;
+    width: 20%;
+}
+
+#loginBtn:hover{
+    background-color: #fff;
+    color: #0e76a8;
+    border: 1px solid #0e76a8;
+}
+
+
+#loginLink{
+    color: #0e76a8;
+    text-decoration: underline;
+}
+
+#registerBtn {
+    color: white;
+    background-color: #0e76a8;
+    border: none;
+    margin: 5px auto;
+    display: block;
+    width: 20%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+
+}
+
+#registerBtn:hover{
+    background-color: #fff;
+    color: #0e76a8;
+    border: 1px solid #0e76a8;
+}
+
+
+#registerlink{
+    color: #0e76a8;
+    text-decoration: underline;
+}
+
+.userHeader{
+    margin-top: 40px;
+    
+}
+
+
+.userHeader .col-md-12{
+    box-shadow: #0e76a8 0px 2px 5px 0px;
+    border-radius: 10px;
+}
+
+

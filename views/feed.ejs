@@ -1,0 +1,34 @@
+
+ <%- include('./partials/loggedIn') %>
+
+  <section class="feedHeader">
+    <img class="image-fluid logoImage2" src="<%= user.image %>" alt="Card image" >
+    <h4 class="feedNote">Welcome, <%= user.userName %> To The Diary BLog.</h4>
+  </section>
+  
+
+
+   <div class="container">
+    <div class="row">
+      <% for(let i = 0; i < blog.length; i++) { %> 
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top logoImage2" src="<%= blog[i].imageId %>" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title"><%= blog[i].title %></h4>
+              <p class="card-text"><%= blog[i].snippet %></p>
+              <p class="card-text"><%= blog[i].likes %> Likes </p>
+              <a href="/diary/<%= blog[i].id %>" class="card-link">Read More</a>
+            </div>
+          </div>
+        </div>
+         <% } %>
+    </div>
+   </div>
+
+
+ 
+     
+
+
+<%- include('./partials/footer') %>

@@ -1,0 +1,24 @@
+<%- include('./partials/loggedIn') %>
+
+
+<div class="container">
+    <div class="row">
+      <% for(let i = 0; i < singleUserDiary.length; i++) { %> 
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top logoImage2" src="<%= singleUserDiary[i].imageId %>" alt="Card image">
+            <div class="card-body">
+              <h4 class="card-title"><%= singleUserDiary[i].title %></h4>
+              <p class="card-text"><%= singleUserDiary[i].snippet %></p>
+              <p class="card-text"><%= singleUserDiary[i].likes %> Likes </p>
+              <a href="/diary/<%= singleUserDiary[i].id %>" class="card-link">Read More</a>
+            </div>
+          </div>
+        </div>
+         <% } %>
+    </div>
+   </div>
+
+
+
+<%- include('./partials/footer') %>
