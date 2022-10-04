@@ -20,7 +20,7 @@
                     <% if(userDiary[i].snippet.length <= 100) { %>
                     <p class="card-text"><%= userDiary[i].snippet %></p>
                     <% } else { %>
-                     <p class="card-text"></p>
+                     <p class="card-text">snippet is too long. click on See More</p>
                      <% } %>
                     <span><%= userDiary[i].date %></span> <br> <br>
                     <a href="/diary/viewDiary/<%= userDiary[i]._id %>" class="card-link">See More</a>
