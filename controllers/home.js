@@ -4,7 +4,7 @@ module.exports = {
     getFeed:  async (req, res) => {
        try {
             const diaryBlog =  await Diary.find({ completed : true })
-            res.render('feed', { blog : diaryBlog, user : req.user, title : " Diary Blog"})
+            res.render('feed.ejs', { blog : diaryBlog, user : req.user, title : " Diary Blog"})
         } catch (error) {
             console.error(error)
         }

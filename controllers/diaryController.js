@@ -6,7 +6,7 @@ module.exports = {
        try {
         const userDiary = await Diary.find({userId : req.user.id})
         const diaryCount = await Diary.countDocuments({userId : req.user.id, completed : false})
-        res.render('profile', { userDiary :userDiary, user :req.user,  title : "PROFILE"})
+        res.render('profile.ejs', { userDiary :userDiary, user :req.user,  title : "PROFILE"})
         
        } catch (error) {
         console.error(error)
@@ -15,7 +15,7 @@ module.exports = {
 
     renderDiaryForm : async (req, res) => {
         try {
-            res.render('diaryForm', { user : req.user,  title : "Create Diary"})
+            res.render('diaryForm.ejs', { user : req.user,  title : "Create Diary"})
         } catch (error) {
             console.error(error)
         }
@@ -44,7 +44,7 @@ module.exports = {
         try {
             const oneDiary = await Diary.findById(req.params.id)
             const comment =  await Comment.find({ postId : req.params.id}).sort({ createdAt : "desc"}).lean()
-            res.render('diary', { oneDiary : oneDiary, title : oneDiary.title, user : req.user, comment : comment,})
+            res.render('diary.ejs', { oneDiary : oneDiary, title : oneDiary.title, user : req.user, comment : comment,})
         } catch (error) {
             console.error(error)
         }
@@ -104,7 +104,7 @@ module.exports = {
         try {
             const singleUserDiary = await Diary.find({ _id : req.params.id })
             console.log(singleUserDiary)
-            res.render('userDiaries', { title : 'jesus', singleUserDiary : singleUserDiary})
+            res.render('userDiaries.ejs', { title : 'jesus', singleUserDiary : singleUserDiary})
         } catch (error) {
            console.error(error) 
         }
@@ -113,7 +113,7 @@ module.exports = {
     editDiaryBody :  async (req, res) => {
         try {
             const editDiary = await Diary.findById(req.params.id)
-            res.render('editPost', { title : "Edit Diary", editDiary: editDiary, user : req.user})
+            res.render('editPost.ejs', { title : "Edit Diary", editDiary: editDiary, user : req.user})
         } catch (error) {
             console.error(error)
         }
@@ -138,7 +138,7 @@ module.exports = {
     getUserDiary: async (req, res) => {
         try {
             const userDiary =  await Diary.findById(req.params.id)
-            res.render('userDiary', { userDiary : userDiary, title : userDiary.title, user : req.user})
+            res.render('userDiary.ejs', { userDiary : userDiary, title : userDiary.title, user : req.user})
 
         } catch (error) {
             console.error(error)
