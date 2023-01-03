@@ -42,6 +42,11 @@ const diarySchema = new mongoose.Schema({
       require: true,
     },
 
+    quatity : {
+      type : Number,
+      default: 0,
+    },
+
      date : {
         type: Date,
         default : Date.now,
