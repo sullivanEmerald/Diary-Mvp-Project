@@ -6,10 +6,10 @@ body{
     background-color: #0e76a8 ;
 }
 
-/* .nav-item > a{
-    color: red;
+.navbar-nav li a {
     font-size: 20px;
-} */
+    color: #fff;
+}
 
 .nav-item > a:hover,
 .brand-container > a:hover{
